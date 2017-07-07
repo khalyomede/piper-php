@@ -19,11 +19,11 @@ Piper::set([12, 8, 'apple', 19, 16, 'kiwi', 'banana'])
 ## Features
 - Cascading input-output pipe logic 
 - Possibility to echo or get the final result
-- Large possibilites with either custom functions or Piper Market classes
+- Large possibilites with either custom functions or Piper Comunity classes
 - Recursive pipe call
 
 ## Why should I use Piper ?
-If you want to use a global class that let you mix multiple logic, from local functions to custom Class, by market Classes to PHP functions, and you are eager to build beautiful, readable, and reusable code, Piper-PHP is made for you.
+If you want to use a global class that let you mix multiple logic, from local functions to custom classes, from custom Piper classes to PHP functions, and you are eager to build beautiful, readable, and reusable code, Piper-PHP is made for you. If you love the Gulp.js way, you will love Piper-PHP too !
 
 ## Can I do a port of Piper-PHP in another language ?
 Yes for sure, we even encourage this ! We want to build a better developper experience (DX), so feel free to copy and adapt this concept ! Sharing is caring.
@@ -53,14 +53,15 @@ composer.json
 composer.lock
 ```
 
-## Example 1 : using Piper PHP Market class
+## Example 1 : using Piper PHP Community class
 _this example features hypotetical classes to illustrate this example_
+
 Download the Piper class of another friend (hypotetical class). Execute this command in your project folder :
 ```bash
-composer require someone/piper-array-average
+composer require someone/piper-array-average && composer update
 ```
 ```php
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Khalyomede\Piper;
 use Someone\PiperArrayAverage as ArrayAverage;
@@ -89,8 +90,34 @@ This will print :
 TEXT
 ```
 
-## Example 3 : mixing custom functions, PHP functions and Piper Market class
-_coming soon_
+## Example 3 : mixing custom functions, PHP functions and Piper Comunity class
+_this example features hyptotetical classes to illustrate this example_
+
+Download the Piper class of another friend (hypotetical class). Execute this command in your project folder :
+```bash
+composer require someone/piper-array-average && composer update
+```
+Now let the fun begin :
+```php
+require __DIR__ . '/vendor/autoload.php';
+
+use Khalyomede\Piper;
+use Someone\PiperArrayAverage as ArrayAverage;
+
+function convertInt( $input ) {
+	return (int) $input;
+}
+
+Piper::set([5, 17, 12, 14, 9])
+  ->pipe( ArrayAverage::do() )
+  ->pipe( 'convertInt' )
+  ->pipe( function() { return Piper::input() + 5; } )
+  ->echo();
+```
+This will print : 
+```bash
+16
+```
 
 ## Example 4 : without initial `set` method
 _coming soon_
@@ -98,7 +125,7 @@ _coming soon_
 ## Example 5 : using `echo` instead of `get`
 _coming soon_
 
-## Piper Market classes
+## Piper Community classes
 _coming soon_
 
 ## Build my Piper class
