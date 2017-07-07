@@ -9,9 +9,12 @@ use Her\PiperArrayAverage as ArrayAverage;
 Piper::set([12, 8, 'apple', 19, 16, 'kiwi', 'banana'])
   ->pipe( ArrayFilterNumber::do() )
   ->pipe( ArrayAverage::do() )
+  ->pipe( 'intval' )
+  ->pipe( 'addOne' ) // your previously created function
+  ->pipe( function() { return Pipe::input() + 3 } )
   ->echo();
   
-// 13.75
+// 17
 ```
 ## Features
 - Cascading input-output pipe logic 
@@ -29,7 +32,7 @@ Yes for sure, we even encourage this ! We want to build a better developper expe
 Me and my brother, [aminnairi](https://github.com/aminnairi). 
 
 ## Why creating Piper ?
-We literally fell in love with [Gulp.js](http://gulpjs.com/), which is a task automater that is famous for simplifying your front process, like minifying, processing files, ... And we searched the first pages to hopefuly find a repository for using pipes in PHP but did not find anything ! So we wanted to made it for you guys :)
+We literally fell in love with [Gulp.js](http://gulpjs.com/), which is a task automater that is famous for simplifying your front process, like minifying, processing files, ... We searched to hopefuly find a repository for using pipes in PHP but did not find anything that fit our needs ! So we wanted to made it for you guys :)
 
 ## How to install it without Composer ?
 Worry no more, Piper-PHP got you covered. Simply copy the content of the file `/src/piper.php`, removes the `namespace Khalyomede;` and include this file in your project. You are good to go !
