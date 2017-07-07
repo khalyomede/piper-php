@@ -160,7 +160,55 @@ TEST
 - `mixed Piper::$input` : get the public static property representing the input.
 
 ## Build my Piper class
-Follow this steps to be up and runing with your freshly Piper Comunity class and help people do less and better
+Follow this steps to be up and runing with your freshly Piper Comunity class and help people do less and better.
 
+### 1. Guidelines
+We will give you some tips to do the cleanest Piper Comunity class possible :
+#### 1.1 Use Piper before your package name
+If you deal with array average, instead of `me/array-average` instead use `me/piper-array-average`. This will improve your SEO and help the comunity to see which composer package deals with Piper.
+#### 1.2. Use kebab case for package name
+Instead of naming your package `me/piperArrayAverage`, prefer using `me/piper-array-average` for a better readability.
+#### 1.3. Use an uppercase and camel case for your class name
+A good class name begins with an uppercase letter, and no dashes. An example of good class name would be :
+```php
+class PiperArrayAverage {}
+```
+#### 1.4. Use lowercase and kebab case for you class file
+If we assume you put your class in folder `src/`, prefer using `src/piper-array-average.php` instead of `src/piperarrayaverage.php`. This will improves the readability.
+#### 1.5. Precise you are dealing with PHP in your package description
+Let the users know, since it may not be visible in your package name.
+#### 1.6. Use PHP pre-requisit >= 5.3.0
+Set up your `composer.json` `require` attribute to at least `5.3.0` as the classes will use namespaces. For example, you `composer.json` could looks like this :
+```json
+{
+    "name": "me/piper-array-average",
+    "description": "Piper Comunity class that returns the average of numeric values in an array.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+    	"php": ">=5.3.0"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"Me\\": "src/"
+    	}
+    }
+}
+```
+#### 1.7. Name your test file `getting-started.php`
+This will let the user instantly know that it can rely on this file to learn more on the usage of your class.
+#### 1.8. Prefer example instead of long descriptive method text
+Users want to get quicly started and, mostly on the web, will cease to read if the description gets too long or too broad. Prefer short and explicit example than short descriptives text.
+### 2. Create your folder
+_coming soon_
+### 3. Open a command line and initiate Git
+_coming soon_
+### 4. Initiate Composer
+_coming soon_
+### 5. Create a `src` folder with your class inside
+_coming soon_
+### 6. Create a `test` folder with a `getting-started.php` file inside
+_coming soon_
 ## Need more ?
 Feel free to do a Pull Request and let us know which feature you would like to see the most.
