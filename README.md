@@ -11,7 +11,7 @@ Piper::set([12, 8, 'apple', 19, 16, 'kiwi', 'banana'])
   ->pipe( ArrayAverage::do() )
   ->pipe( 'intval' )
   ->pipe( 'addOne' ) // your previously created function
-  ->pipe( function() { return Pipe::input() + 3 } )
+  ->pipe( function() { return Piper::input() + 3; } )
   ->echo();
   
 // 17
