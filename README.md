@@ -43,8 +43,36 @@ Run the following command in your project folder :
 composer require khalyomede/piper-php
 ```
 
+## Examples
+All the examples will assume you have the following arborescence :
+```
+/
+  index.php
+  vendor/
+  composer.json
+  composer.lock
+```
+
 ## Example 1 : using Piper PHP Market class
-_coming soon_
+_this example features hypotetical classes to illustrate this example_
+Download the Piper class of another friend (hypotetical class). Execute this command in your project folder :
+```bash
+composer require someone/piper-array-average
+```
+```php
+require __DIR__ . '/../vendor/autoload.php';
+
+use Khalyomede\Piper;
+use Someone\PiperArrayAverage as ArrayAverage;
+
+Piper::set([5, 17, 12, 14, 9])
+	->pipe( ArrayAverage::do() )
+	->echo();
+```
+This will print :
+```bash
+11.4
+```
 
 ## Example 2 : using custom function
 _coming soon_
