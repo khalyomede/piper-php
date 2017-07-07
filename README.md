@@ -75,7 +75,19 @@ This will print :
 ```
 
 ## Example 2 : using custom function
-_coming soon_
+```php
+function uppercase( $input ) {
+  return strtoupper( $input );
+}
+
+Piper::set('text')
+  ->pipe('uppercase')
+  ->echo();
+```
+This will print :
+```bash
+TEXT
+```
 
 ## Example 3 : mixing custom functions, PHP functions and Piper Market class
 _coming soon_
