@@ -3,7 +3,7 @@
 namespace Khalyomede;
 
 use Khalyomede\PiperContract;
-use Exception;
+use InvalidArgumentException;
 
 class Piper {
 	public static $input = null;
@@ -20,6 +20,10 @@ class Piper {
 
 	public static function pipe( $instance ) {
 		if(	is_string($instance) ) {
+			if(! function_exists($instance)) {
+				throw new InvalidArgumentException((string) $instance . ' function does not exist');
+			}
+
 			self::$input = call_user_func($instance, self::$input);
 		}
 		else if( is_callable($instance) ) {
@@ -30,7 +34,7 @@ class Piper {
 			self::$input = $instance::execute( self::$input );
 		}
 		else {
-			throw new Exception('Mario broke the pipe...');
+			throw new InvalidArgumentException(get_class($instance) . ' does not implements PiperContract interface');
 		}
 
 		return new self;
