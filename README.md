@@ -157,6 +157,10 @@ TEST
 - `void Piper::pipe( callable $string )` : use a PHP function or a previously created function by you to be called on the input (available via `Piper::input()`).
 - `void Piper::echo()` : echo the last input (available via `Piper::input()`).
 - `mixed Piper::get()` : returns the last input (available via `Piper::input()`).
+- `mixed Piper::$input` : get the public static property representing the input.
 
 ## Build my Piper class
-_coming soon_
+Follow this steps to be up and runing with your freshly Piper Comunity class and help people do less and better
+
+## Need more ?
+Feel free to do a Pull Request and let us know which feature you would like to see the most.
