@@ -120,9 +120,21 @@ This will print :
 ```
 
 ## Example 4 : without initial `set` method
-_coming soon_
+```php
+require __DIR__ . '/vendor/autoload.php';
 
-## Example 5 : using `echo` instead of `get`
+use Khalyomede\Piper;
+
+Piper::pipe( function() { return 'test' } )
+  ->pipe('strtoupper')
+  ->echo();
+```
+This will print :
+```php
+TEST
+```
+
+## Example 5 : using `get` instead of `echo`
 _coming soon_
 
 ## Piper Community classes
