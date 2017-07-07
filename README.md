@@ -130,15 +130,33 @@ Piper::pipe( function() { return 'test' } )
   ->echo();
 ```
 This will print :
-```php
+```
 TEST
 ```
 
 ## Example 5 : using `get` instead of `echo`
-_coming soon_
+```php
+require __DIR__ . '/vendor/autoload.php';
 
-## Piper Community classes
-_coming soon_
+$uppercase = Piper::set('test')
+  ->pipe( 'strtoupper' )
+  ->get();
+
+echo $uppercase;
+```
+This will print :
+```bash
+TEST
+```
+
+## Available Piper methods
+- `mixed Piper::input()` : returns the input of the last `Piper::pipe()` or `Piper::set()`. In other terms, get the last item of you Piper chain.
+- `void Piper::set( $variable )` : set the input (available via `Piper::input()`) with the variable. It can be any variable possible.
+- `void Piper::pipe( callable $function )` : use a callback function to be applied to the input (available via `Piper::input()`). See example above.
+- `void Piper::pipe( PiperContract $class )` : use a class that implements the `PiperContract` interface (see Build my Piper class below).
+- `void Piper::pipe( callable $string )` : use a PHP function or a previously created function by you to be called on the input (available via `Piper::input()`).
+- `void Piper::echo()` : echo the last input (available via `Piper::input()`).
+- `mixed Piper::get()` : returns the last input (available via `Piper::input()`).
 
 ## Build my Piper class
 _coming soon_
