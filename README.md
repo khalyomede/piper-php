@@ -105,7 +105,7 @@ use Khalyomede\Piper;
 use Someone\PiperArrayAverage as ArrayAverage;
 
 function convertInt( $input ) {
-	return (int) $input;
+  return (int) $input;
 }
 
 Piper::set([5, 17, 12, 14, 9])
