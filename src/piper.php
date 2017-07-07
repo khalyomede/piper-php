@@ -43,4 +43,8 @@ class Piper {
 	public static function get() {
 		return self::$input;
 	}
+
+	public static function echo() {
+		echo self::$input;
+	}
 }
