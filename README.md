@@ -40,17 +40,17 @@ Worry no more, Piper-PHP got you covered. Simply copy the content of the file `/
 ## How to install it using Composer ?
 Run the following command in your project folder :
 ```bash
-composer require khalyomede/piper-php
+composer require khalyomede/piper-php && composer update
 ```
 
 ## Examples
 All the examples will assume you have the following arborescence :
 ```
 /
-  index.php
-  vendor/
-  composer.json
-  composer.lock
+index.php
+vendor/
+composer.json
+composer.lock
 ```
 
 ## Example 1 : using Piper PHP Market class
@@ -66,8 +66,8 @@ use Khalyomede\Piper;
 use Someone\PiperArrayAverage as ArrayAverage;
 
 Piper::set([5, 17, 12, 14, 9])
-	->pipe( ArrayAverage::do() )
-	->echo();
+  ->pipe( ArrayAverage::do() )
+  ->echo();
 ```
 This will print :
 ```bash
