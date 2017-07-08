@@ -40,7 +40,7 @@ Worry no more, Piper-PHP got you covered. Simply copy the content of the file `/
 ## How to install it using Composer?
 Run the following command in your project folder:
 ```bash
-composer require khalyomede/piper-php && composer update
+$ composer require khalyomede/piper-php && composer update
 ```
 
 ## Examples
