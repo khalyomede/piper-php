@@ -296,7 +296,7 @@ On thing to know is, to works correctly, Piper needs you to implement the `Piper
 use You\PiperAdd as Add;
 
 Piper::set(1)
-	->pipe( Add(3)::do() )
+	->pipe( Add::do(3) )
 	->echo();
 // echo "4"
 ```
