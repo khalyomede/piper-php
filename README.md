@@ -216,8 +216,6 @@ See `Example step-by-step of how to build a Piper Comunity class` to see which r
 ### 6. Create an `example` folder with a `getting-started.php` file inside
 _coming soon_
 ## Example step-by-step of how to build a Piper Comunity class
-At any moment, you can see the final class that we are going to build together by browsing on this repository : `src/piper-add.php`.
-
 First, let us create a folder whenever you need. Let us name it "piper-add" :
 ```bash
 mkdir piper-add
