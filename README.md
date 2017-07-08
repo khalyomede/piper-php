@@ -201,6 +201,10 @@ This will let the user instantly know that it can rely on this file to learn mor
 #### 1.8. Prefer example instead of long descriptive method text
 Users want to get quicly started and, mostly on the web, will cease to read if the description gets too long or too broad. Prefer short and explicit example than short descriptives text.
 ### 2. Create your folder
+```shell
+$ mkdir newProject
+```
+Where `newProject` is the name of your folder.
 _coming soon_
 ### 3. Open a command line and initiate Git
 _coming soon_
