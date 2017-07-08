@@ -23,7 +23,7 @@ Piper::set([12, 8, 'apple', 19, 16, 'kiwi', 'banana'])
 - Recursive pipe call
 
 ## Why should I use Piper ?
-If you want to use a global class that let you mix multiple logic, from local functions to custom classes, from custom Piper classes to PHP functions, and you are eager to build beautiful, readable, and reusable codes, then Piper-PHP is made for you. If you love the Gulp.js way, you will love Piper-PHP too !
+If you want to use a global class that let you mix multiple logic, from local functions to custom classes, from custom Piper classes to PHP functions, and you are eager to build beautiful, readable, and reusable codes, then Piper-PHP is made for you. If you love the [Gulp.js](http://gulpjs.com/) way, you will love Piper-PHP too !
 
 ## Can I do a port of Piper-PHP in another language ?
 Yes for sure, we even encourage this ! We want to build a better developper experience (DX), so feel free to copy and adapt this concept ! Sharing is caring.
