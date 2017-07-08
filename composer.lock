@@ -4,9 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8f01af0dd6833c9c40ef050731642aa8",
-    "content-hash": "c16d67ea61500cf1b67df3a46b156dfc",
-    "packages": [],
+    "hash": "921bf59c14eda58eaa75bb12cacf7be5",
+    "content-hash": "490c2874955b69595f3b05f7e40cc9c7",
+    "packages": [
+        {
+            "name": "khalyomede/piper-contract-php",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/khalyomede/piper-contract-php.git",
+                "reference": "62f777508b8b66b2a4b9917ad0aeb6fd15038829"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/khalyomede/piper-contract-php/zipball/62f777508b8b66b2a4b9917ad0aeb6fd15038829",
+                "reference": "62f777508b8b66b2a4b9917ad0aeb6fd15038829",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Khalyomede\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Interface used by Piper-PHP to build safe Piper Comunity class",
+            "time": "2017-07-08 14:13:26"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
