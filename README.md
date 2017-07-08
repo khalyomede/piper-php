@@ -289,6 +289,120 @@ class PiperAdd {
 	
 }
 ```
-On thing to know is, to works correctly, Piper needs you to implement the `PiperContract` class.
+On thing to know is, to works correctly, Piper needs you to implement the `PiperContract` class. An interface is like a contract that you pass between us (Me and Aminnairi, creators of the library) and you. We will not give you a salary (unfortunately), but it is more like a moral contract : you agree that your class you are going to build should an must include 2 important methods : `public static function go( $parameter ) {}` and `public static function execute( $input ) {}`. 
+
+`do` method is called when one of our friend use your class to pipe its logic. For example :
+```php
+use You\PiperAdd as Add;
+
+Piper::set(1)
+	->pipe( Add(3)::do() )
+	->echo();
+// echo "4"
+```
+But contrary as you could think, `do` does not handle the logic ! It must indeed only returns an instance of your class. We need it to make Piper works well, please trust us ;).
+
+So, you will see a large majority of Piper Comunity class will have barely the same code :
+```php
+class PiperAdd {
+  public static $parameter = 0;
+
+  public static function do( $parameter ) {
+    self::$parameter = $parameter;
+
+    return new self;	
+  }
+}
+```
+Then, your logic will be located inside `execute` method. This is where you can have fun :
+```php
+class PiperAdd {
+  public static $parameter = 0;
+
+  public static function execute( $input ) {
+    return self::$parameter + $input; // The addition is here
+  }
+
+  public static function do( $parameter ) {
+    self::$parameter = $parameter;
+
+    return new self;
+  }
+}
+```
+Like you can see, you will need to trust us again, and assume `$input` parameter of the method `execute` will be our `Piper::input()`, in other terms, will be the input of the last `::set()` or `::pipe()`. This two methods ensure the piping logic. 
+
+Of course, you can tweak this base class to add as many other methods as you like, but this two methods should be still present to works correctly. If it is not the case, `PiperContract` will throw errors.
+
+Hey, but where is this dear PiperContract ?? Dang ! Let fix it :
+```php
+use Khalyomede\PiperContract;
+
+class PiperAdd {
+  public static $parameter = 0;
+
+  public static function execute( $input ) {
+    return self::$parameter + $input; // The addition is here
+  }
+
+  public static function do( $parameter ) {
+    self::$parameter = $parameter;
+
+    return new self;
+  }
+}
+```
+This is better. But now, as you require a dependency, you need to import it via Packagist.org. Use your command line in your project folder, and do :
+```bash
+composer require khalyomede/piper-contract-php
+```
+The full result for the `src/piper-add.php` file should look like this :
+```php
+namespace You;
+
+use Khalyomede\PiperContract;
+
+class PiperAdd {
+  public static $parameter = 0;
+
+  public static function execute( $input ) {
+    return self::$parameter + $input; // The addition is here
+  }
+
+  public static function do( $parameter ) {
+    self::$parameter = $parameter;
+
+    return new self;
+  }
+}
+```
+It is now time to try our class. To do so, create a file `test/test-pipe.php` containing :
+```php
+require __DIR__ '/../vendor/autoload.php';
+
+use Khalyomede\Piper;
+use You\PiperAdd;
+
+Piper::set(1)
+  ->pipe( Add::do(2) )
+  ->echo();
+```
+If you test this file, the Composer autoloader will tell you that it does not know `Khalyomede\Piper`. To fix it, you need to import it from Packagist.org using :
+```
+composer require-dev Khalyomede\Piper;
+```
+Noticed the `require-dev` instead of `require` ? It is because your developer friend will already use Piper as a dependencies, so you do not want to overload your library with useless dependencies (not that Piper is useless, but you know a little in this case... Oh my god what I have said... Bare with me I slept 3 hours today).
+
+Now you should be up and runing for your first test. Let us try it out. In your folder, open a command line if you did not and type :
+```php
+php test/test-pipe.php
+```
+You should see in output :
+```
+3
+```
+Because you make an addition of the set variable (1) and your Pipe Comunity class `Add` that add the parameter (2) to the input (1).
+
+Congratulations. Have fun with it, we hope we can build together a better PHP developpement network that make us be more efficient pipe-oriented approach and avoid us re-programming similar logic !
 ## Need more ?
 Feel free to do a Pull Request and let us know which feature you would like to see the most.
