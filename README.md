@@ -402,8 +402,8 @@ You should see in output :
 ```
 3
 ```
-Because you make an addition of the set variable (1) and your Pipe Comunity class `Add` that add the parameter (2) to the input (1).
+You see this result cecause you make an addition of the set variable (1) and your Pipe Comunity class `Add` that add the parameter (2) to the input (1).
 
-Congratulations. Have fun with it, we hope we can build together a better PHP developpement network that make us be more efficient pipe-oriented approach and avoid us re-programming similar logic !
+Congratulations. Have fun with it, we hope we can build together a better PHP developpement network that make us be more efficient with this pipe-oriented approach and avoid us re-programming similar logic !
 ## Need more ?
 Feel free to do a Pull Request and let us know which feature you would like to see the most.
