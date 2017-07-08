@@ -293,6 +293,7 @@ On thing to know is, to works correctly, Piper needs you to implement the `Piper
 
 `do` method is called when one of our friend use your class to pipe its logic. For example :
 ```php
+use Khalyomede\Piper;
 use You\PiperAdd as Add;
 
 Piper::set(1)
