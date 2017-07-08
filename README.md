@@ -196,7 +196,7 @@ Set up your `composer.json` `require` attribute to at least `5.3.0` as the class
     }
 }
 ```
-#### 1.7. Name your test file `getting-started.php`
+#### 1.7. Name your example file `getting-started.php`
 This will let the user instantly know that it can rely on this file to learn more on the usage of your class.
 #### 1.8. Prefer example instead of long descriptive method text
 Users want to get quicly started and, mostly on the web, will cease to read if the description gets too long or too broad. Prefer short and explicit example than short descriptives text.
@@ -212,7 +212,85 @@ _coming soon_
 _coming soon_
 ### 5. Create a `src` folder with your class inside
 _coming soon_
-### 6. Create a `test` folder with a `getting-started.php` file inside
+See `Example step-by-step of how to build a Piper Comunity class` to see which requirement Piper awaits of you fresh new class.
+### 6. Create an `example` folder with a `getting-started.php` file inside
 _coming soon_
+## Example step-by-step of how to build a Piper Comunity class
+At any moment, you can see the final class that we are going to build together by browsing on this repository : `src/piper-add.php`.
+
+First, let us create a folder whenever you need. Let us name it "piper-add" :
+```bash
+mkdir piper-add
+```
+We will enter into this folder :
+```bash
+cd mkdir piper-add
+```
+Next thing, we will initiate Git repository :
+```bash
+git init
+```
+It is more convenient to do a Git init before a Composer init as Composer will then propose us to exclude `vendor` folder from every of your git push.
+
+So naturally, the next thing you will want to do a initiate Composer :
+```bash
+composer init
+```
+Once you filled all the question in the prompt command, Composer will build a `composer.json` file.
+
+Now, we will create the folder `src` that will contains `piper-add.php` file, your next big community project...
+
+Once you finished this last step, create another folder that will let us try our code. Create a `test` folder with a `test-pipe.php` file.
+
+You will need to notify Composer that those files exists. To do so, update the `composer.json` file at the root of your folder, and add the following lines :
+```json
+...
+"require": {
+	"php": ">=5.3.0"	
+},
+...
+"autoload": {
+	"psr-4": {
+		"You\\": "src/"
+	}
+}
+```
+So your final `composer.json` file should look like this :
+```json
+{
+    "name": "you/piper-add",
+    "description": "Piper Comunity class that let you chain addition on your workflow.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+    	"php": ">=5.3.0"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"You\\": "src/"
+    	}
+    }
+}
+```
+Now, in your project folder, use the command line again and type :
+```bash
+composer update
+```
+A new folder should have been created : `vendor`. Besides this folder, another file should also have been created : `composer.lock`, but do not mind (and do not update it).
+
+It is time to begin the fun : writing your logic. Go to your file `src/piper-add.php`, put PHP opening tags `<?php`, and add :
+```php
+namespace You;
+```
+This line will let the users import your class in their own project. This is why the autoloader needs this line (according to the name you set in `composer.json` at the `autoload` attribute).
+
+Then add your class (empty) :
+```php
+class PiperAdd {
+	
+}
+```
+On thing to know is, to works correctly, Piper needs you to implement the `PiperContract` class.
 ## Need more ?
 Feel free to do a Pull Request and let us know which feature you would like to see the most.
