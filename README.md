@@ -13,23 +13,23 @@ Piper::set([12, 8, 'apple', 19, 16, 'kiwi', 'banana'])
   ->pipe( 'addOne' ) // your previously created function
   ->pipe( function() { return Piper::input() + 3; } )
   ->echo();
-  
+
 // 17
 ```
 ## Features
-- Cascading input-output pipe logic 
+- Cascading input-output pipe logic
 - Possibility to echo or get the final result
 - Large possibilites with either custom functions or Piper Comunity classes
 - Recursive pipe call
 
 ## Why should I use Piper ?
-If you want to use a global class that let you mix multiple logic, from local functions to custom classes, from custom Piper classes to PHP functions, and you are eager to build beautiful, readable, and reusable code, Piper-PHP is made for you. If you love the Gulp.js way, you will love Piper-PHP too !
+If you want to use a global class that let you mix multiple logic, from local functions to custom classes, from custom Piper classes to PHP functions, and you are eager to build beautiful, readable, and reusable codes, then Piper-PHP is made for you. If you love the Gulp.js way, you will love Piper-PHP too !
 
 ## Can I do a port of Piper-PHP in another language ?
 Yes for sure, we even encourage this ! We want to build a better developper experience (DX), so feel free to copy and adapt this concept ! Sharing is caring.
 
 ## Who initiated the project ?
-Me and my brother, [aminnairi](https://github.com/aminnairi). 
+Me and my brother, [aminnairi](https://github.com/aminnairi).
 
 ## Why creating Piper ?
 We literally fell in love with [Gulp.js](http://gulpjs.com/), which is a task automater that is famous for simplifying your front process, like minifying, processing files, ... We searched to hopefuly find a repository for using pipes in PHP but did not find anything that fit our needs ! So we wanted to made it for you guys :)
@@ -114,7 +114,7 @@ Piper::set([5, 17, 12, 14, 9])
   ->pipe( function() { return Piper::input() + 5; } )
   ->echo();
 ```
-This will print : 
+This will print :
 ```bash
 16
 ```
