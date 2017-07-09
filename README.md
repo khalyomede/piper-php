@@ -152,7 +152,22 @@ This will print:
 ```bash
 TEST
 ```
+## Example 6: using `Piper::input()` outside a pipeline
+```php
+require __DIR__ . '/vendor/autoload.php';
 
+function addOne() {
+  return Piper::input() + 1; // Possible via static property (works like a Javascript's Promise)
+}
+
+Piper::set(2)
+  ->pipe('addOne')
+  ->echo();
+```
+This will print:
+```bash
+3
+```
 ## Available Piper methods
 - `mixed Piper::input()` : returns the input of the last `Piper::pipe()` or `Piper::set()`. In other terms, get the last item of you Piper chain.
 - `void Piper::set( $variable )` : set the input (available via `Piper::input()`) with the variable. It can be any variable possible.
