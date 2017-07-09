@@ -77,6 +77,8 @@ This will print:
 
 ## Example 2: using custom function
 ```php
+require __DIR__ . '/vendor/autoload.php';
+
 function uppercase( $input ) {
   return strtoupper( $input );
 }
