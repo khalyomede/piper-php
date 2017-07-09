@@ -168,13 +168,13 @@ We will give you some tips to do the cleanest Piper Comunity class possible:
 If you deal with array average, instead of `me/array-average` instead use `me/piper-array-average`. This will improve your SEO and help the comunity to see which composer package deals with Piper.
 #### 1.2. Use kebab case for package name
 Instead of naming your package `me/piperArrayAverage`, prefer using `me/piper-array-average` for a better readability.
-#### 1.3. Use an uppercase and camel case for your class name
+#### 1.3. Use an uppercase and camel case for your class name and file name
 A good class name begins with an uppercase letter, and no dashes. An example of good class name would be:
 ```php
 class PiperArrayAverage {}
 ```
-#### 1.4. Use lowercase and kebab case for you class file
-If we assume you put your class in folder `src/`, prefer using `src/piper-array-average.php` instead of `src/piperarrayaverage.php`. This will improves the readability.
+#### 1.4. Use camel case for you class file
+If we assume you put your class in folder `src/`, prefer using `src/piperArrayAverage.php` instead of `src/piperarrayaverage.php`. This will improves the readability.
 #### 1.5. Precise you are dealing with PHP in your package description
 Let the users know, since it may not be visible in your package name.
 #### 1.6. Use PHP pre-requisit >= 5.3.0
@@ -236,7 +236,7 @@ composer init
 ```
 Once you filled all the question in the prompt command, Composer will build a `composer.json` file.
 
-Now, we will create the folder `src` that will contains `piper-add.php` file, your next big community project...
+Now, we will create the folder `src` that will contains `piperAdd.php` file, your next big community project...
 
 Once you finished this last step, create another folder that will let us try our code. Create a `test` folder with a `test-pipe.php` file.
 
@@ -277,7 +277,7 @@ composer update
 ```
 A new folder should have been created : `vendor`. Besides this folder, another file should also have been created : `composer.lock`, but do not mind (and do not update it).
 
-It is time to begin the fun : writing your logic. Go to your file `src/piper-add.php`, put PHP opening tags `<?php`, and add :
+It is time to begin the fun : writing your logic. Go to your file `src/piperAdd.php`, put PHP opening tags `<?php`, and add :
 ```php
 namespace You;
 ```
@@ -402,8 +402,12 @@ You should see in output :
 ```
 3
 ```
-You see this result cecause you make an addition of the set variable (1) and your Pipe Comunity class `Add` that add the parameter (2) to the input (1).
+You see this result because you make an addition of the set variable (1) and your Pipe Comunity class `Add` that add the parameter (2) to the input (1).
+
+If you see any issue or something not running correctly as mentionned in this tutorial, please fill up an Issue and we will try our best to resolve it.
 
 Congratulations. Have fun with it, we hope we can build together a better PHP developpement network that make us be more efficient with this pipe-oriented approach and avoid us re-programming similar logic !
+## Need an example without parameters ?
+Check [`Piper Array Average`](https://github.com/khalyomede/piper-array-average-php) Comunity class (PHP) and dive into the code to know how to quickly remove the needs of a parameter.
 ## Need more ?
 Feel free to do a Pull Request and let us know which feature you would like to see the most.
