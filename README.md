@@ -181,11 +181,14 @@ Pipe::set('TEST')
   ->echo()
   ->pipe('ucfirst') // only first character uppercase
   ->echo()
+  ->eol()
+  ->echo()
   ->print_r();
 ```
 This will print:
 ```bash
 testTest
+Test
 Test
 ```
 ## Available Piper methods
