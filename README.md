@@ -187,18 +187,20 @@ Follow this steps to be up and runing with your freshly Piper Comunity class and
 We will give you some tips to do the cleanest Piper Comunity class possible:
 #### 1.1 Use Piper before your package name
 If you deal with array average, instead of `me/array-average` instead use `me/piper-array-average`. This will improve your SEO and help the comunity to see which composer package deals with Piper.
-#### 1.2. Use kebab case for package name
+#### 1.2. Add "-php" in at the end of your package name
+You might want to be clear that this github package (and soon this Packagist library) will be available only for PHP developpers so you might want to write `me/piper-array-average-php` to clearly set the goal of this project.
+#### 1.3. Use kebab case for package name
 Instead of naming your package `me/piperArrayAverage`, prefer using `me/piper-array-average` for a better readability.
-#### 1.3. Use an uppercase and camel case for your class name and file name
+#### 1.4. Use an uppercase and camel case for your class name and file name
 A good class name begins with an uppercase letter, and no dashes. An example of good class name would be:
 ```php
 class PiperArrayAverage {}
 ```
-#### 1.4. Use camel case for you class file
+#### 1.5. Use camel case for you class file
 If we assume you put your class in folder `src/`, prefer using `src/piperArrayAverage.php` instead of `src/piperarrayaverage.php`. This will improves the readability.
-#### 1.5. Precise you are dealing with PHP in your package description
+#### 1.6. Precise you are dealing with PHP in your package description
 Let the users know, since it may not be visible in your package name.
-#### 1.6. Use PHP pre-requisit >= 5.3.0
+#### 1.7. Use PHP pre-requisit >= 5.3.0
 Set up your `composer.json` `require` attribute to at least `5.3.0` as the classes will use namespaces. For example, you `composer.json` could looks like this:
 ```json
 {
@@ -217,9 +219,9 @@ Set up your `composer.json` `require` attribute to at least `5.3.0` as the class
     }
 }
 ```
-#### 1.7. Name your example file `getting-started.php`
+#### 1.8. Name your example file `getting-started.php`
 This will let the user instantly know that it can rely on this file to learn more on the usage of your class.
-#### 1.8. Prefer example instead of long descriptive method text
+#### 1.9. Prefer example instead of long descriptive method text
 Users want to get quicly started and, mostly on the web, will cease to read if the description gets too long or too broad. Prefer short and explicit example than short descriptives text.
 ### 2. Create your folder
 ```shell
