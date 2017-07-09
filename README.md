@@ -170,6 +170,24 @@ This will print:
 ```bash
 3
 ```
+## Example 7: inserting "utilities" inside a pipe logic
+```php
+require __DIR__ . '/vendor/autoload.php';
+
+use Khalyomede\Piper;
+
+Pipe::set('TEST')
+  ->pipe('strtolower') // all lowercase
+  ->echo()
+  ->pipe('ucfirst') // only first character uppercase
+  ->echo()
+  ->print_r();
+```
+This will print:
+```bash
+testTest
+Test
+```
 ## Available Piper methods
 - `mixed Piper::input()` : returns the input of the last `Piper::pipe()` or `Piper::set()`. In other terms, get the last item of you Piper chain.
 - `void Piper::set( $variable )` : set the input (available via `Piper::input()`) with the variable. It can be any variable possible.
