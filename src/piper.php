@@ -86,4 +86,13 @@ class Piper {
 
 		return new self;
 	}
+
+	public static function eol() {
+		if( php_sapi_name() === 'cli' ) {
+			echo PHP_EOL;
+		}
+		else {
+			echo '<br />';
+		}
+	}
 }
