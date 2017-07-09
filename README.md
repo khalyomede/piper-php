@@ -156,6 +156,8 @@ TEST
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
+use Khalyomede\Piper;
+
 function addOne() {
   return Piper::input() + 1; // Possible via static property (works like a Javascript's Promise)
 }
