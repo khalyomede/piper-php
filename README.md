@@ -79,6 +79,8 @@ This will print:
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
+use Khalyomede\Piper;
+
 function uppercase( $input ) {
   return strtoupper( $input );
 }
