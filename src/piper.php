@@ -49,10 +49,14 @@ class Piper {
 
 	public static function echo() {
 		echo self::$input;
+
+		return new self;
 	}
 
 	public static function exec() {
 		exec( self::$input );
+
+		return new self;
 	}
 
 	public static function print_r( $mode = self::INDENT ) {
@@ -65,5 +69,7 @@ class Piper {
 		if( php_sapi_name() !== 'cli' && $mode === self::INDENT ) {
 			echo '</pre>';
 		}
+
+		return new self;
 	}
 }

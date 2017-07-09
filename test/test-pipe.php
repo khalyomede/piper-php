@@ -11,5 +11,6 @@ function addOne( $input ) {
 Piper::set(13)
   ->pipe( 'intval' )
   ->pipe( 'addOne' ) // your previously created function
+  ->echo()
   ->pipe( function() { return Piper::input() + 3; } )
   ->print_r();
