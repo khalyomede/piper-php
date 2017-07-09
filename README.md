@@ -190,7 +190,7 @@ If you deal with array average, instead of `me/array-average` instead use `me/pi
 #### 1.2. Add "-php" in at the end of your package name
 You might want to be clear that this github package (and soon this Packagist library) will be available only for PHP developpers so you might want to write `me/piper-array-average-php` to clearly set the goal of this project.
 #### 1.3. Use kebab case for package name
-Instead of naming your package `me/piperArrayAverage`, prefer using `me/piper-array-average` for a better readability.
+Instead of naming your package `me/piperArrayAveragePHP`, prefer using `me/piper-array-average-php` for a better readability.
 #### 1.4. Use an uppercase and camel case for your class name and file name
 A good class name begins with an uppercase letter, and no dashes. An example of good class name would be:
 ```php
