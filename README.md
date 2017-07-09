@@ -390,9 +390,9 @@ Piper::set(1)
 ```
 If you test this file, the Composer autoloader will tell you that it does not know `Khalyomede\Piper`. To fix it, you need to import it from Packagist.org using :
 ```
-composer require-dev Khalyomede\Piper;
+composer require Khalyomede\Piper --dev
 ```
-Noticed the `require-dev` instead of `require` ? It is because your developer friend will already use Piper as a dependencies, so you do not want to overload your library with useless dependencies (not that Piper is useless, but you know a little in this case... Oh my god what I have said... Bare with me I slept 3 hours today).
+Noticed the `--dev` ? It is because your developer friend will already use Piper as a dependencies, so you do not want to overload your library with useless dependencies (not that Piper is useless, but you know a little in production for a custom library... Oh my god what I have said... Bare with me I slept 3 hours today).
 
 Now you should be up and runing for your first test. Let us try it out. In your folder, open a command line if you did not and type :
 ```bash
