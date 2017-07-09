@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "921bf59c14eda58eaa75bb12cacf7be5",
     "content-hash": "490c2874955b69595f3b05f7e40cc9c7",
     "packages": [
         {
             "name": "khalyomede/piper-contract-php",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/khalyomede/piper-contract-php.git",
-                "reference": "62f777508b8b66b2a4b9917ad0aeb6fd15038829"
+                "reference": "9cf74eb99295f2aa4cfbf58a46cd5636f1dc5309"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/khalyomede/piper-contract-php/zipball/62f777508b8b66b2a4b9917ad0aeb6fd15038829",
-                "reference": "62f777508b8b66b2a4b9917ad0aeb6fd15038829",
+                "url": "https://api.github.com/repos/khalyomede/piper-contract-php/zipball/9cf74eb99295f2aa4cfbf58a46cd5636f1dc5309",
+                "reference": "9cf74eb99295f2aa4cfbf58a46cd5636f1dc5309",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +34,7 @@
                 "MIT"
             ],
             "description": "Interface used by Piper-PHP to build safe Piper Comunity class",
-            "time": "2017-07-08 14:13:26"
+            "time": "2017-07-09T12:21:08+00:00"
         }
     ],
     "packages-dev": [],
