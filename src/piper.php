@@ -72,4 +72,18 @@ class Piper {
 
 		return new self;
 	}
+
+	public static function var_dump( $mode = self::INDENT ) {
+		if( php_sapi_name() !== 'cli' && $mode === self::INDENT ) {
+			echo '<pre>';
+		}
+
+		var_dump( self::$input );
+
+		if( php_sapi_name() !== 'cli' && $mode === self::INDENT ) {
+			echo '</pre>';
+		}
+
+		return new self;
+	}
 }
