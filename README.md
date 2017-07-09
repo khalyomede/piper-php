@@ -176,7 +176,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Khalyomede\Piper;
 
-Pipe::set('TEST')
+Piper::set('TEST')
   ->pipe('strtolower') // all lowercase
   ->echo()
   ->pipe('ucfirst') // only first character uppercase
