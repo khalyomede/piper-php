@@ -12,4 +12,4 @@ Piper::set(13)
   ->pipe( 'intval' )
   ->pipe( 'addOne' ) // your previously created function
   ->pipe( function() { return Piper::input() + 3; } )
-  ->echo();
+  ->print_r();

@@ -6,6 +6,9 @@ use Khalyomede\PiperContract;
 use InvalidArgumentException;
 
 class Piper {
+	const INDENT = 1;
+	const NOINDENT = 2;
+
 	public static $input = null;
 
 	public static function set( $input ) {
@@ -50,5 +53,17 @@ class Piper {
 
 	public static function exec() {
 		exec( self::$input );
+	}
+
+	public static function print_r( $mode = self::INDENT ) {
+		if( php_sapi_name() !== 'cli' && $mode === self::INDENT ) {
+			echo '<pre>';
+		}
+
+		print_r( self::$input );
+
+		if( php_sapi_name() !== 'cli' && $mode === self::INDENT ) {
+			echo '</pre>';
+		}
 	}
 }
