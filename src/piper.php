@@ -95,4 +95,20 @@ class Piper {
 			echo '<br />';
 		}
 	}
+
+	/**
+	 * @todo call debug_backtrace for each pipe if ::startDebugBacktrace() have been called
+	 * @todo adding ::endDebugBacktrace() to add a better control of debug_backtrace
+	 */
+	public static function debug_backtrace( $options = DEBUG_BACKTRACE_PROVIDE_OBJECT, $limit = 0, $mode = self::INDENT ) {
+		if( php_sapi_name() !== 'cli' && $mode === self::INDENT ) {
+			echo '<pre>';
+		}
+
+		print_r( debug_backtrace( $options, $limit ) );
+
+		if( php_sapi_name() !== 'cli' && $mode === self::INDENT ) {
+			echo '</pre>';
+		}		
+	}
 }
