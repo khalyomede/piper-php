@@ -289,7 +289,7 @@ So your final `composer.json` file should look like this :
     "description": "Piper Comunity class that let you chain addition on your workflow.",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
     	"php": ">=5.3.0"
     },
@@ -300,6 +300,8 @@ So your final `composer.json` file should look like this :
     }
 }
 ```
+*IMPORTANT* Your `minimum-stability` should be set to `stable` to use this library. We will make an effort trying to figure out which composition of requirement is the best for you and us but for the moment if you would like to work with Piper you will need to set it to `stable`.
+
 Now, in your project folder, use the command line again and type :
 ```bash
 composer update
