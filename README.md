@@ -220,7 +220,7 @@ class PiperArrayAverage {}
 #### 5. Use camel case for you class file
 If we assume you put your class in folder `src/`, prefer using `src/piperArrayAverage.php` instead of `src/piperarrayaverage.php`. This will improves the readability.
 #### 6. Precise you are dealing with PHP in your package description
-Let the users know, since it may not be visible in your package name.
+Let the users know, since this description might be visible from Google search results.
 #### 7. Use PHP pre-requisit >= 5.3.0
 Set up your `composer.json` `require` attribute to at least `5.3.0` as the classes will use namespaces. For example, you `composer.json` could looks like this:
 ```json
