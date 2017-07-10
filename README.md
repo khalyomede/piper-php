@@ -251,7 +251,7 @@ mkdir piper-add
 ```
 We will enter into this folder :
 ```bash
-cd mkdir piper-add
+cd piper-add
 ```
 Next thing, we will initiate Git repository :
 ```bash
