@@ -3,7 +3,7 @@ Puts an end to unreadable PHP code.
 
 ```php
 use Khalyomede\Piper;
-use You\PiperArrayFilterNumber as ArrayFIlterNumber;
+use You\PiperArrayFilterNumber as ArrayFilterNumber;
 use Her\PiperArrayAverage as ArrayAverage;
 
 Piper::set([12, 8, 'apple', 19, 16, 'kiwi', 'banana'])
