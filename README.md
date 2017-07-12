@@ -440,5 +440,7 @@ If you see any issue or something not running correctly as mentionned in this tu
 Congratulations. Have fun with it, we hope we can build together a better PHP developpement network that make us be more efficient with this pipe-oriented approach and avoid us re-programming similar logic !
 ## Need an example without parameters ?
 Check [`Piper Array Average`](https://github.com/khalyomede/piper-array-average-php) Comunity class (PHP) and dive into the code to know how to quickly remove the needs of a parameter.
+## Need an example with shared properties ?
+PiperPHP seems to make shared variables like the one you share in a PDO logic complicated ? Not at all ! Using simple globals variable logic you can build powerful single-connection PDO logic (or any other object than PDO). With the use of defined conventions for naming your global Piper make this a breeze (for the end developper). Check [`Piper Pdo`](https://github.com/khalyomede/piper-pdo-php) to learn how to build this kind of advanced comunity class.
 ## Need more ?
 Feel free to do a Pull Request and let us know which feature you would like to see the most.
